@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO</title>
+  </head>
+  <body> 
+    <header>
+      <h1>TO-DO</h1>
+    </header>
+    <main>
+    </main>
+    <footer>
+      <svg aria-label="Add Tasks" class="add" width="10vw" height="10vw" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle class="addCircle" cx="50%" cy="50%" r="40%" fill="#EB8369"/>
+        <line x1="50" y1="30" x2="50" y2="70" stroke-width="4" stroke-linecap="round" stroke="white"/>
+        <line x1="30" y1="50" x2="70" y2="50" stroke-width="4" stroke-linecap="round" stroke="white"/>
+    </svg>
+    <dialog>
+      <form>
+
+        <fieldset class="date"> 
+          <legend>Date Input</legend>
+          <label for="date">Date:  </label>
+          <input type="date" id="date" name="date" required>
+        </fieldset>
+
+        <fieldset class="time">
+          <legend>Time Input</legend>
+          <label for="time">Time:  </label>
+          <input type="time" id="time" name="time" required>
+        </fieldset>
+
+        <fieldset class="tasks">
+          <legend>Tasks Input</legend>
+          <label for="task">Task:  </label>
+          <input type="text" id="task" name="task" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed" required>
+        </fieldset>
+
+        <button type="submit" class="modalClose">Submit</button>
+
+      </form>
+    </dialog>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
