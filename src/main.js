@@ -50,14 +50,14 @@ const modal = {
     },
 
     closeModal: function() {
-        this.closeModalButton.addEventListener("click", (e) => {
-            e.preventDefault();
+        this.closeModalButton.addEventListener("click", () => {
 
             if (this.modalDate.value && this.modalTime.value && this.modalTask.value) {
                 createAndPlaceTaskInDom(this.modalDate.value, this.modalTime.value, this.modalTask.value);
+                this.modalDialog.close();
                 this.modalTask.value = '';
             }
-            this.modalDialog.close();
+
         });
     },
 
