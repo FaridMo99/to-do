@@ -1,20 +1,51 @@
 {
+  "main": "electron/main.js",
   "name": "to-do",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "open -a 'Google Chrome' http://localhost:5173",
     "dev": "vite",
     "prebuild": "rm -rf dist/",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "electron .",
+    "dev-electron": "vite && electron .",
+    "prepackage": "rm -rf build/",
+    "package": "electron-builder",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "electron": "^35.0.1",
+    "electron-builder": "^25.1.8",
     "gh-pages": "^6.3.0",
+    "prettier": "^3.5.3",
     "vite": "^6.2.0"
   },
   "dependencies": {
     "date-fns": "^4.1.0"
+  },
+  "build": {
+    "appId": "com.yourname.to-do",
+    "productName": "To-Do",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "build"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }

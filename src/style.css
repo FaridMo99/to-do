@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=DM+Serif+Text:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=DM+Serif+Text:ital@0;1&display=swap");
 
 :root {
-  --fontColor:#FEFCEC;
-  --bgColor:#262626;
-  --headerColor:#E8175D;
+  --fontColor: #fefcec;
+  --bgColor: #262626;
+  --headerColor: #e8175d;
 
   /*old todo styles*/
-  --bg-color2:#474747;
-  --font-color:azure;
-  --font-style:"Carrois Gothic SC", serif;
-  --fourth-color:#CC527A;
-  --fifth-color:#A8A7A7;
-  --box-color:#161616;
-  --hover-opacity:75%;
-  --active-opacity:50%;
+  --bg-color2: #474747;
+  --font-color: azure;
+  --font-style: "Carrois Gothic SC", serif;
+  --fourth-color: #cc527a;
+  --fifth-color: #a8a7a7;
+  --box-color: #161616;
+  --hover-opacity: 75%;
+  --active-opacity: 50%;
 }
 
 * {
@@ -22,17 +22,19 @@
 }
 
 h1 {
-  color:var(--fontColor);
+  color: var(--fontColor);
 }
 
 body {
-  margin:0;
+  margin: 0;
   background-color: var(--bgColor);
   overflow-x: hidden;
   padding-bottom: 10vh;
 }
 
 header {
+  position: sticky;
+  top: 0;
   background-color: var(--headerColor);
   width: 100vw;
   height: 20dvh;
@@ -44,7 +46,7 @@ header {
 svg {
   position: fixed;
   bottom: 2px;
-  right:2px;
+  right: 2px;
 
   &:hover {
     transform: scale(1.03);
@@ -63,9 +65,9 @@ main {
   justify-content: space-between;
   width: 100%;
 
-  > div{
+  > div {
     margin-top: 5vw;
-    width:90%;
+    width: 90%;
     height: 27vh;
     background-color: var(--bgColor);
     border: 3px solid #242424;
@@ -77,15 +79,13 @@ main {
     &:hover {
       box-shadow: 0 0 10px 2px grey;
     }
-
   }
-
 }
 
-.hidden, legend {
+.hidden,
+legend {
   display: none;
 }
-
 
 .top {
   height: 30%;
@@ -95,7 +95,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color:var(--fontColor);
+  color: var(--fontColor);
 }
 
 .x {
@@ -116,12 +116,16 @@ main {
   background-color: rgba(255, 255, 255, 0.843);
 
   p {
-    margin-left: 2vw;
     font-size: 1.3rem;
+    width: 50%;
+    height: 100%;
+    padding: 2vw;
+    overflow-wrap: break-word;
+    overflow: hidden;
   }
 
   button {
-    margin-top:11vh ;
+    margin-top: 11vh;
     padding: 3px 7px;
     border: none;
     background-color: rgba(255, 255, 255, 0);
@@ -148,14 +152,14 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
 
-  >* {
+  > * {
     margin-top: 2vh;
     display: flex;
     align-items: center;
   }
 
   .modalClose {
-    width:33%;
+    width: 33%;
     margin: 2vh auto;
     background-color: var(--headerColor);
     border: 2px solid #242424;
