@@ -84,12 +84,12 @@ class Task {
 
         div.innerHTML = `
             <div class="top"> 
-                <span>${this.date}</span> 
-                <span>${this.time}</span> 
+                <span class="x">${this.date}</span> 
+                <span class="y">${this.time}</span> 
             </div>
             <div class="bottom">
             <p>${this.task}</p> 
-            <button class="delete-task">Delete</button>
+            <button class="delete-task"><img src="check.svg"></button>
             </div>
         `;
         

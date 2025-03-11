@@ -2,15 +2,13 @@
 
 :root {
   --fontColor:#FEFCEC;
-  --bgColor:#DBDBD0;
-  --headerColor:#EB8369;
+  --bgColor:#262626;
+  --headerColor:#E8175D;
 
   /*old todo styles*/
-  --bg-color:#262626;
   --bg-color2:#474747;
   --font-color:azure;
   --font-style:"Carrois Gothic SC", serif;
-  --third-color:#E8175D;
   --fourth-color:#CC527A;
   --fifth-color:#A8A7A7;
   --box-color:#161616;
@@ -60,17 +58,15 @@ svg {
 
 main {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 
   > div{
-    width:20vw;
-    margin-top:10vh;
-    margin-left: auto;
-    margin-right: auto;
-    height: 25vh;
+    margin-top: 5vw;
+    width:90%;
+    height: 27vh;
     background-color: var(--bgColor);
     border: 3px solid #242424;
     border-radius: 3px;
@@ -97,27 +93,38 @@ main {
   background-color: var(--headerColor);
   border-bottom: 3px solid #242424;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   color:var(--fontColor);
 }
 
+.x {
+  margin-left: 3vw;
+}
+
+.y {
+  margin-right: 3vw;
+}
 
 .bottom {
   height: 70%;
   width: 100%;
   color: #242424;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.843);
+
+  p {
+    margin-left: 2vw;
+    font-size: 1.3rem;
+  }
 
   button {
-    background-color: var(--headerColor);
-    border: 2px solid #242424;
-    border-radius: 5px;
-    margin-top:3vh ;
+    margin-top:11vh ;
     padding: 3px 7px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
 
     &:hover {
       transform: scale(1.05);
@@ -151,7 +158,7 @@ form {
     width:33%;
     margin: 2vh auto;
     background-color: var(--headerColor);
-    border: none;
+    border: 2px solid #242424;
     border-radius: 3px;
     color: var(--fontColor);
     padding: 0.5vw 3vw;
@@ -174,3 +181,6 @@ input:focus {
   outline: 2px solid var(--headerColor);
 }
 
+input {
+  margin-left: 1vw;
+}
