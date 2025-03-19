@@ -95,7 +95,7 @@ class Task {
             </div>
             <div class="bottom">
             <p>${this.task}</p> 
-            <button class="delete-task"><img src="check.svg"></button>
+            <button class="delete-task" aria-label="remove task"><img src="check.svg" alt="Remove Task"></button>
             </div>
         `;
 

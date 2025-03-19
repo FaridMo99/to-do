@@ -90,6 +90,7 @@ legend {
 .top {
   height: 30%;
   width: 100%;
+  font-weight: bold;
   background-color: var(--headerColor);
   border-bottom: 3px solid #242424;
   display: flex;
